@@ -1,1 +1,21 @@
 # NoteVision
+
+### backend
+**steps to get backend server working**
+In backend:
+*create python environment*
+```
+python -m venv .venv
+```
+*activate environment*
+```
+source .venv/bin/activate
+```
+*install fastapi*
+```
+pip install "fastapi[standard]"
+```
+**command to run server:** 
+```
+fastapi dev main.py
+```
