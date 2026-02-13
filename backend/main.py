@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
 
 app = FastAPI()
 
@@ -12,4 +12,8 @@ def read_item(item_id: int, q: str | None = None):
 
 @app.get("/analyze/") #TODO
 def analyze():
-    return ("TODO")
+    return {"TODO": "TODO"}
+
+@app.get("/health")
+def health_check(response: Response):
+    return {"status": f"Ok"}
